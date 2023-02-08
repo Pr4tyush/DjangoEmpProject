@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>This ois our Official Site</title>
+</head>
+<body>
+    <div class="container" style="text-align: center;">
+        {% include "navbar.html" %}
+        <h1>My site</h1>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Laudantium impedit commodi officia ipsa, delectus cum hic ipsum quia aliquid! Inventore natus beatae aliquam doloribus itaque, deleniti quos nostrum repudiandae. Nesciunt dicta saepe eum quo! Veniam pariatur reprehenderit, tenetur libero aut et, cumque dolore numquam, obcaecati dolor eveniet impedit cum! Cumque quia officia iusto magni distinctio cupiditate quasi dolores doloremque velit.</p>
+        <button>ContactME</button>
+        <h1>My name is {{name}}</h1>
+        <hr>
+        <h1>Student data</h1>
+        <p>Studentname: {{student.student_name}}</p>
+        <p>Student address: {{student.student_add}}</p>
+        <p>Student college: {{student.student_college}}</p>
+
+        <form action="/about/" method="POST">
+            {% csrf_token %}
+            <input type="text" name = "check">
+            <button>Send</button>
+        </form>
+    </div>
+    
+</body>
+</html>
